@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #8A2BE2;
+  --secondary-color: #00FFFF;
+  --background-color: #000000;
+  --text-color: #F8F8FF;
+  --accent-color: #2E2E2E;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-black text-gray-100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[#8A2BE2] to-[#00FFFF] text-black font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-[0_0_10px_#00FFFF] hover:shadow-[0_0_20px_#8A2BE2] hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-orbitron;
+}
+
+.btn-secondary {
+  @apply bg-[#2E2E2E] text-[#F8F8FF] font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-[#3E3E3E] shadow-lg font-orbitron;
+}
+
+.btn-premium {
+  @apply bg-gradient-to-r from-[#8A2BE2] to-[#00FFFF] text-black font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-[0_0_15px_#00FFFF] hover:shadow-[0_0_25px_#8A2BE2] hover:scale-105 font-orbitron;
+}
+
+.form-select {
+  @apply w-full p-3 bg-[#2E2E2E] border border-[#8A2BE2] rounded-lg shadow-[0_0_5px_#8A2BE2] focus:shadow-[0_0_15px_#00FFFF] text-[#F8F8FF] outline-none transition-all duration-300;
+}
+
+.form-input {
+  @apply w-full p-3 bg-[#2E2E2E] border border-[#8A2BE2] rounded-lg shadow-[0_0_5px_#8A2BE2] focus:shadow-[0_0_15px_#00FFFF] text-[#F8F8FF] outline-none transition-all duration-300;
+}
+
+.card {
+  @apply bg-[#2E2E2E] rounded-xl shadow-[0_0_15px_#8A2BE2] border border-[#8A2BE2]/20 transition-all duration-300 hover:shadow-[0_0_25px_#00FFFF];
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDelay {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fade-in-delay {
+  animation: fadeInDelay 0.6s ease-out 0.3s both;
+}
